@@ -26,3 +26,12 @@ SELECT * FROM public.fatture f
 JOIN public. "clienti" c  on f.id_cliente = c.numero_cliente
 WHERE f.importo < 1000 
 ORDER BY numero_fattura ASC 
+
+ESERCIZIO 6
+SELECT f.denominazione, fatture.numero_fattura, fatture.importo, fatture.iva, fatture.data_fattura FROM public.fatture
+JOIN public."fornitore" f on f.denominazione = f.denominazione
+ORDER BY numero_fattura ASC 
+
+ESERCIZIO 7
+SELECT * FROM public.fatture f WHERE f.iva = 20 AND EXTRACT  (YEAR FROM data_fattura) = 2012
+ORDER BY numero_fattura ASC 
