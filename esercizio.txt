@@ -1,0 +1,28 @@
+ESERCIZIO 1
+
+SELECT * FROM public.clienti WHERE  nome ='mario'
+ORDER BY numero_cliente ASC 
+
+
+ESERCIZIO 2
+
+SELECT * FROM public.clienti WHERE  anno_di_nascita =1982
+ORDER BY numero_cliente ASC 
+
+
+ESERCIZIO 3
+
+SELECT * FROM public.fatture WHERE iva = 20
+ORDER BY "numero-fattura" ASC 
+
+ESERCIZIO 4
+
+SELECT * FROM public.prodotti WHERE EXTRACT (YEAR FROM data_attivazione)  = 2017 
+ORDER BY id_prodotto ASC 
+
+ESERCIZIO 5
+
+SELECT * FROM public.fatture f
+JOIN public. "clienti" c  on f.id_cliente = c.numero_cliente
+WHERE f.importo < 1000 
+ORDER BY numero_fattura ASC 
